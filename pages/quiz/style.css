@@ -1,1 +1,156 @@
-/* font-family: 'Roboto', sans-serif; */
+html {
+  font-family: 'Roboto', sans-serif;
+  /* background-color: #ffcb9a; */
+  /* background-color: #d9b08c; */
+  /* background-color: #116466; */
+  background-color: #2c3531;
+  color: #2c3531;
+}
+
+.header {
+  position: relative;
+  z-index: 10;
+  max-height: 70px;
+  background-color: #d9b08c;
+}
+
+.wrapper {
+  padding: 20px 30px;
+  background: transparent;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.logo__img {
+  width: 50px;
+}
+
+.logo__title {
+  font-family: 'Mali', cursive;
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: 1.5rem;
+  color: #d1e8e2;
+}
+
+.navigation {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+}
+
+.navigation__list {
+  display: flex;
+  gap: 15px;
+}
+
+.navigation__item {
+  padding: 5px;
+}
+
+.navigation__item:hover {
+  cursor: pointer;
+  border-bottom: 1px solid #d1e8e2;
+}
+
+.navigation__link {
+  font-family: 'Mali', cursive;
+  color: #2c3531;
+  font-size: 1.125rem;
+}
+
+.navigation__link.active {
+  color: #d1e8e2;
+  font-weight: 700;
+}
+
+
+
+/* main */
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.scores {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  text-align: end;
+  color: #d1e8e2;
+  padding: 0 5px 20px;
+
+}
+
+.card {
+  max-width: 1440px;
+  box-shadow: 0 0 5px 2px #d1e8e2;
+  padding: 30px 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+
+@media (max-width:768px) {
+  
+  .logo__title {
+    letter-spacing: 1rem;
+  }
+
+}
+
+@media (max-width:576px) {
+  
+  .wrapper {
+    padding: 20px 15px;
+  }
+
+  .logo {
+    gap: 10px;
+  }
+
+  .logo__title {
+    font-size: 1.5rem;
+    letter-spacing: 1rem;
+  }
+
+}
+
+@media (max-width:468px) {
+  
+  .wrapper {
+    padding: 20px 15px;
+    gap: 0;
+  }
+
+  .logo {
+    gap: 5px;
+  }
+
+  .logo__title {
+    font-size: 1.25rem;
+    letter-spacing: 0rem;
+  }
+
+  .navigation__list {
+    gap: 0;
+  }
+
+}

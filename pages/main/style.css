@@ -18,8 +18,14 @@
   z-index: 10;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 30px;
   width: 320px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
 }
 
 .logo__img {
@@ -87,10 +93,6 @@ ul {
   letter-spacing: 1.5rem;
   color: #d1e8e2;
   padding-bottom: 30px;
-  /* color: #ffcb9a;
-  color: #d9b08c;
-  color: #116466;
-  color: #2c3531; */
 }
 
 .full-screen__text {
@@ -109,6 +111,7 @@ ul {
   font-weight: 700;
   font-size: 1rem;
   color: #2c3531;
+  /* color: #d1e8e2; */
   text-align: center;
 }
 
@@ -134,13 +137,13 @@ ul {
 
 .info {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 
 .info__item {
   padding: 5px;
   font-family: 'Roboto', sans-serif;
-  color: #000;
+  color: #d1e8e2;
   font-size: 1rem;
 }
 
@@ -151,7 +154,7 @@ ul {
 
 .info__link {
   font-family: 'Roboto', sans-serif;
-  color: #000;
+  color: #d1e8e2;
   font-size: 1rem;
 }
 
