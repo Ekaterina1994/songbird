@@ -173,10 +173,10 @@ ul {
 }
 
 .card__img {
-  border: 2px solid #d1e8e2;
-  width: 100px;
-  height: 100px;
+  width: 300px;
+  height: 200px;
   background-color: #d1e8e2;
+  object-fit: cover;
 }
 
 .card__media {
@@ -224,8 +224,11 @@ ul {
   gap: 10px;
 }
 
-.desciption__text {
+.description__text {
   color: #d1e8e2;
+  font-size: 1.875rem;
+  min-width: 225px;
+  width: 100%;
   display: none;
 }
 
@@ -242,18 +245,27 @@ ul {
   font-size: 1.125rem;
 }
 
-.descriptopn__description {
+.description__description {
   color: #d1e8e2;
   font-size: 1.25rem;
 }
 
 .description__img {
-  width: 30%;
+  width: auto;
+  /* min-height: 350px; */
   object-fit: cover;
 }
 
+.description__img-block {
+  /* height: 100%; */
+  width: auto;
+}
+
+
+
 .btn {
   width: 100%;
+  min-width: 150px;
   height: 100%;
   font-family: 'Mali', cursive;
   font-size: 1.5rem;
@@ -561,4 +573,13 @@ cursor: pointer;
   cursor: inherit;
   background-color: #d9b08c;
   color:#2c3531;
+}
+
+.actual {
+  border-bottom: 2px solid #d9b08c;
+  font-weight: 700;
+}
+
+.none {
+  display: none;
 }
