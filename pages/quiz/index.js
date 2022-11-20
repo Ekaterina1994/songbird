@@ -17,11 +17,18 @@ let results = {};
 let scores = 0;
 
 const checkAnswer = (index) => {
+  let point = 5;
   ANSWERS.addEventListener("click", (event) => {
     if (Number(event.target.id) === birdsDataEn[index][index].id) {
       console.log(122);
       BUTTON_NEXT.disabled = false;
+      scores += point;
+      event.target.classList.add("right");
+    } else {
+      point -= 1;
+      event.target.classList.add("wrong");
     }
+    SCORES.innerText = `Scores: ${scores}`;
   });
 };
 
@@ -79,11 +86,13 @@ const renderIndicator = () => {};
 
 DESCRIPTION_BLOCK.addEventListener("click", (event) => {
   if (event.target.classList.contains("description__next")) {
-    console.log(1);
-
     if (birdsDataEn.length === Number(QUESTION_BLOCK.dataset.currentStep) + 1) {
-      // BUTTON_RESULTS.disabled = false;
-      window.location.href = "../results/index.html";
+
+      BUTTON_RESULTS.disabled = false;
+      BUTTON_RESULTS.addEventListener("click", () =>
+      {
+        window.location.href = "../results/index.html";
+      })
     } else {
       renderQuestions(Number(QUESTION_BLOCK.dataset.currentStep) + 1);
     }
@@ -94,14 +103,8 @@ DESCRIPTION_BLOCK.addEventListener("click", (event) => {
 
 console.log(birdsDataEn);
 
-
-function sounds()
-{
-  
-
-
-  document.addEventListener("DOMContentLoaded", (e) =>
-  {
+function sounds() {
+  document.addEventListener("DOMContentLoaded", (e) => {
     //dom объекты элементов контроля
 
     var av = document.getElementById("av-tag");
@@ -114,14 +117,12 @@ function sounds()
     //переменная для отслеживания воспроизведения звука
     var isPlaying = false;
 
-    av.onloadedmetadata = function ()
-    {
+    av.onloadedmetadata = function () {
       curTime.max = av.duration;
     };
 
     //функция вывода текущего времени воспроизведения
-    av.ontimeupdate = function ()
-    {
+    av.ontimeupdate = function () {
       var sec_num = av.currentTime;
       var hours = Math.floor(sec_num / 3600);
       var minutes = Math.floor((sec_num - hours * 3600) / 60);
@@ -141,20 +142,17 @@ function sounds()
       if (isPlaying) curTime.value = av.currentTime;
     };
     //функция для настройки громкости
-    volume.onchange = function ()
-    {
+    volume.onchange = function () {
       av.volume = volume.value / 10;
     };
     //функция для установки начала воспроизведения
-    curTime.onchange = function ()
-    {
+    curTime.onchange = function () {
       av.pause();
       av.currentTime = curTime.value;
       av.play();
     };
     //функция для вкл/выкл громкости
-    speaker.onclick = function ()
-    {
+    speaker.onclick = function () {
       if (volume.value == 0) {
         volume.value = 10;
         av.volume = 1;
@@ -164,8 +162,7 @@ function sounds()
       }
     };
     //функция для play/pause и изображения кнопки воспроизведения
-    playBtn.addEventListener("click", (a) =>
-    {
+    playBtn.addEventListener("click", (a) => {
       if (isPlaying) {
         av.pause();
         isPlaying = false;
@@ -177,5 +174,4 @@ function sounds()
       }
     });
   });
-
 }

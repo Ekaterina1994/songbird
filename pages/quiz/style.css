@@ -260,7 +260,8 @@ ul {
   background-color: #d9b08c;
 }
 
-.description__next:hover {
+.description__next:hover,
+.description__results:hover {
   cursor: pointer;
   box-shadow: 0 0 5px 2px #d1e8e2; 
   color: #d1e8e2;
@@ -474,14 +475,14 @@ ul {
 
 .song {
     -webkit-appearance: none;
-  height: 15px;
+  height: 10px;
   outline: none;
   -webkit-transition: .2s;
   transition: opacity .2s;
   display: flex;
   align-items: center;
   width: 100%;
-  height: 15px;
+  height: 10px;
   background-color: #d9b08c;
   border-radius: 5px;
   box-shadow: 0 0 5px 2px #d1e8e2;
@@ -538,4 +539,26 @@ cursor: pointer;
   width: 100%;
   background-color: #d1e8e2;
   border-radius: 5px;
+}
+
+.wrong {
+  color: rgba(209, 232, 226, 0.3);
+
+}
+
+.wrong:hover {
+  background: none;
+  color: rgba(209, 232, 226, 0.3);
+  cursor: inherit;
+}
+
+.right {
+  background-color: #d9b08c;
+  color:#2c3531;
+}
+
+.right:hover {
+  cursor: inherit;
+  background-color: #d9b08c;
+  color:#2c3531;
 }
