@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/images/logo.svg"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Indie+Flower&family=Mali:wght@400;500;700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../assets/styles/normalize.css" />
+    <link rel="stylesheet" href="../../pages/gallery/style.css" />
+    <title>Songbird results</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <div class="logo">
+          <img class="logo__img" src="../../assets/images/logo.svg" />
+        </div>
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="../main/index.html">Main</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="../quiz/index.html">PLay</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link active" href="../gallery/index.html"
+                >Gallery</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="wrapper container">
+        <div class="gallery-cards">
+          <div class="card">
+            <div class="card__img">
+              <img class="card__img"
+                src="https://live.staticflickr.com//65535//49298804222_474cfe8682.jpg"
+              />
+            </div>
+            <audio controls>
+              <source type="audio/mp3" src="https://www.xeno-canto.org/sounds/uploaded/XIQVMQVUPP/XC518684-Grands%20corbeaux%2009012020%20Suzon.mp3">
+            </audio>
+            <div class="card__about">
+              <p class="card__name">Raven</p>
+              <p class="card__species">Corvus corax</p>
+              <p class="card__description">
+                Raven is a large bird. The body length reaches 70 centimeters,
+                the wingspan is up to one and a half meters. Ravens inhabit the
+                vicinity of the Tower. There is a belief in England that the day
+                the black crows fly away from the Tower, the monarchy will
+                collapse.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="../gallery/index.js"></script>
+  </body>
+</html>

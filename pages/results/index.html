@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/images/logo.svg"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Indie+Flower&family=Mali:wght@400;500;700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../assets/styles/normalize.css" />
+    <link rel="stylesheet" href="../../pages/results/style.css" />
+    <title>Songbird results</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <div class="logo">
+          <img class="logo__img" src="../../assets/images/logo.svg" />
+        </div>
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a class="navigation__link active" href="../main/index.html"
+                >Main</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="../quiz/index.html">PLay</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="../gallery/index.html">Gallery</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <div class="full-screen">
+        <div class="full-screen__body">
+          <h1 class="full-screen__title">Results</h1>
+          <div class="full-screen__text">
+            <p class="full-screen__link full-screen__scores"></p>
+            <a class="full-screen__link" href="../quiz/index.html"
+              >Let's play again!</a
+            >
+          </div>
+        </div>
+        <video autoplay muted loop preload="auto" class="full-screen__video">
+          <source type="video/mp4" src="../../assets/images/1.mp4" />
+        </video>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="wrapper">
+        <ul class="info">
+          <li class="info__item">
+            <a class="info__link" href="https://github.com/Ekaterina1994"
+              >Veretennikova Ekaterina</a
+            >
+          </li>
+          <li class="info__item">2022</li>
+          <li class="info__item">
+            <a class="info__link" href="https://rs.school/js/"
+              ><img class="info__img" src="../../assets/images/rss.svg"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script type="module" src="../results/index.js"></script>
+  </body>
+</html>
